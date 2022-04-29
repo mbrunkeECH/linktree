@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
+import { User, Platforms, Shows } from "./Data";
+
+//components
+import Header from "./components/Header/Header";
+
+
+//assets
+import logo from "../src/assets/logo.svg";
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="main" style={{ "--link": User.primaryLinkColor, "--text": User.primaryTextColor }}>
+      {/* TODO: change Data.js to a json file and replicate api call (does the same thing but is a little more realistic)  */}
+      <Header userName={User.userName} userImage={User.profilePic} />
+
+      <div className="links">
+        <h1>Hello linktree</h1>
+      </div>
+
+      <div className="logo">
+        {/* accessibility TODO: alt tags and general accessability*/}
+        <img src={logo} alt="linktee logo" />
+      </div>
+    </div >
   );
 }
 
