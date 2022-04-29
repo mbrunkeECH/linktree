@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# Linktree Frontend Assessment with notes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Preview](./src/assets/preview.png)
 
-## Available Scripts
+## My approach
 
-In the project directory, you can run:
+- Spend some time at the start on the figma board figuring out the best way to approach this task. This is where I would check for re-usable components, tools needed etc.
+- Build out the basic config first. If I could do this again I would probably use a JSON file to simulate an api call with a fetch/axios component.
+- Create Classic Link component. This is where I ran into the first challenge of making the Link component totally re-usable -> How do I differentiate Classic vs other link types?
 
-### `npm start`
+## The Problem
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+We have three new link types for our users profile pages, (such as https://linktr.ee/guardian)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Classic
 
-### `npm test`
+   - Accepts a single URL and title.
+   - Opens the URL in a new tab.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Music Player
 
-### `npm run build`
+   - On click, the link type displays a set of links to music streaming platforms where you can find the song.
+   - Clicking on an element inside of the Music Link will open an audio player for that song.
+   - Clicking on the logo of the platform will take you to that song, on that platform.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Shows List
+   - On click, the link type displays a list of links to upcoming events.
+   - Clicking on an upcoming event will navigate to the event in SongKick.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+You are required to build the profile UI and the front end components for the new features as per the assets mentioned below (Front End Assets).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Design Considerations
 
-### `npm run eject`
+- All links are globally themed by the users preferences (usually available via API e.g `{ backgroundColor: "rebeccapurple", color: "palegoldenrod" }`).
+- All links invert colour on hover.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Front End Assets
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+A sketch file is available within this repository. You can upload this to [Figma](https://www.figma.com/) to view in fine grain detail.
+All assets are supplied with in the [/assets](./assets) dir in this repo.
+You can import fonts from [Google Fonts](https://fonts.google.com/).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Testing
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Some level of testing is expected for your solution. As a guide, try to meet these three acceptance criteria.
 
-## Learn More
+1. "When a user clicks on a Music Player Link, the Spotify streaming platform is visible"
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. "When a user clicks on the Shows List Link, a list of X shows are visible"
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. "When a user clicks on the Music Player Link and then on a Shows List Link, the Music Player Link closes"
 
-### Code Splitting
+## Your Solution
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Consider re-usability through composition.
+- Consider that profiles can be custom styled by each user.
+- You are not expected to fully complete this challenge, so `@todo` comments are encouraged. How you design your solution and your ideas for the future are more important than functionality.
 
-### Analyzing the Bundle Size
+## Rules & Tips
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Use of frameworks such as VueJS or ReactJS will be looked upon favourably.
+- You cannot connect to a real world API - mock any data sets that you require.
+- Imagine that this is shared repo and factor that into the development process.
 
-### Making a Progressive Web App
+## Submission
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Set up your own git repository and make commits as you would in your day to day work. Submit a link to your repo when you're finished.
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Best of luck! :rocket: :blush:

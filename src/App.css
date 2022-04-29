@@ -40,6 +40,6 @@
   background-color: white;
 }
 
-.primaryLink:nth-child(even) {
+.primaryLink:nth-child(odd) {
   margin: 1rem 0;
 }
