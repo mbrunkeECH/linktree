@@ -38,7 +38,7 @@ function App() {
           }
         </Link>
 
-        <Link title="Player"
+        <Link title="Music"
           dropDownVisible={isPlayerVisible}
           onClick={() => {
             setIsPlayerVisible(!isPlayerVisible);

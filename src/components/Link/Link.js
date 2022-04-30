@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Link.css";
 
 // using children as props allows us to add any new components (Link types) in without reconfiguring. 

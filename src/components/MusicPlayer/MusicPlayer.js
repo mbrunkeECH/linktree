@@ -17,7 +17,7 @@ const MusicPlayer = ({ Platforms }) => {
         {Platforms.map(platform => (
           <div className="platform" key={platform.name}>
             <a href={platform.url} target="_blank" rel="noreferrer" className="PlatformLogo">
-              <img src={platform.logo} alt="logo" />
+              <img src={platform.logo} alt={`${platform.name} logo`} />
             </a>
             <div className="nameArrow" onClick={() => setPlayer(!player)}>
               <p id="platName">{platform.name}</p>

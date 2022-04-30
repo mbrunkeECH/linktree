@@ -10,7 +10,7 @@ import arrow from '../../assets/icons/arrow.svg'
 const ShowsList = ({ Shows }) => {
   const upcoming = Shows.upcoming;
   return (
-    <div className="showsList" data-testid="showsList" >
+    <div className="showsList" data-testid="showsContainer">
       {
         upcoming && upcoming.map(show => (
           // TODO: change key to a UUID
@@ -26,7 +26,7 @@ const ShowsList = ({ Shows }) => {
         ))
       }
       <div className="logo">
-        <img src={soundkick} alt="" />
+        <img src={soundkick} alt="soundkick-logo" aria-label="soundkick-logo" />
       </div>
     </div >
 
