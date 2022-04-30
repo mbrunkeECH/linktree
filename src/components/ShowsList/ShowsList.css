@@ -1,0 +1,28 @@
+.showsList {
+  background-color: #f5f7f8;
+  width: 100%;
+  margin-top: -1rem;
+}
+
+.show {
+  display: flex;
+  padding: 0 1rem;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #dadee0;
+  cursor: pointer;
+}
+.location {
+  font-size: 0.8em;
+}
+
+.sold {
+  font-size: 0.8em;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}

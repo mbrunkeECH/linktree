@@ -5,10 +5,10 @@ import { User, Platforms, Shows } from "./Data";
 //components
 import Header from "./components/Header/Header";
 
-
 //assets
 import logo from "../src/assets/logo.svg";
 import Link from "./components/Link/Link";
+import ShowsList from "./components/ShowsList/ShowsList";
 
 function App() {
 
@@ -20,7 +20,10 @@ function App() {
       {/* Pass the styles through here so we do not have to add the colours to each component */}
       <div className="links" style={{ "--link": User.primaryLinkColor, "--text": User.primaryTextColor }}>
         {/* TODO: could map through these so no manual config needed on this page */}
-        <Link isClassic={true} title="Classic Link" User={User} link_url="https://github.com/mbrunkeECH/linktree" />
+        <Link isClassic={true} title="Classic Link" link_url="https://github.com/mbrunkeECH/linktree" />
+        <Link title="Shows" dropDownVisible={false}>
+          <ShowsList Shows={Shows} />
+        </Link>
       </div>
 
 
