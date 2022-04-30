@@ -7,6 +7,9 @@
 - Spend some time at the start on the figma board figuring out the best way to approach this task. This is where I would check for re-usable components, tools needed etc.
 - Build out the basic config first. If I could do this again I would probably use a JSON file to simulate an api call with a fetch/axios component.
 - Create Classic Link component. This is where I ran into the first challenge of making the Link component totally re-usable -> How do I differentiate Classic vs other link types?
+- Create Shows component - Identified in the planning this is not extremely dissimilar to the music link
+- Create Music component - this is where a state management library would have been useful with opening and closing links but time did not allow.
+- Testing - in the real world this would be done before it is merged into master (or QA!). I was just concerned about time, if I did this again that is one thing I would do differently.
 
 ## The Problem
 
