@@ -31,6 +31,8 @@ function App() {
             setIsShowsVisible(!isShowsVisible);
             setIsPlayerVisible(false);
           }}>
+          {/* TODO: There is a better way to do this without polluting the app.js screen, potentially inside the link screen or component.
+            That would allow app.js to be dynamic and not have to handle state, State management such as Redux Toolkit or useContext would solve this - try if I have time */}
           {isShowsVisible &&
             <ShowsList Shows={Shows} />
           }
@@ -42,6 +44,8 @@ function App() {
             setIsPlayerVisible(!isPlayerVisible);
             setIsShowsVisible(false);
           }}>
+          {/* TODO: There is a better way to do this without polluting the app.js screen, potentially inside the link screen or component.
+            That would allow app.js to be dynamic and not have to handle state, State management such as Redux Toolkit or useContext would solve this - try if I have time */}
           {isPlayerVisible &&
             <MusicPlayer Platforms={Platforms.platforms} />
           }
