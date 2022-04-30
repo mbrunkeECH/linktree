@@ -1,5 +1,5 @@
 import "./App.css";
-import React from "react";
+import React, { useState } from "react";
 import { User, Platforms, Shows } from "./Data";
 
 //components
@@ -9,8 +9,11 @@ import Header from "./components/Header/Header";
 import logo from "../src/assets/logo.svg";
 import Link from "./components/Link/Link";
 import ShowsList from "./components/ShowsList/ShowsList";
+import MusicPlayer from "./components/MusicPlayer/MusicPlayer";
 
 function App() {
+  const [isShowsVisible, setIsShowsVisible] = useState(false);
+  const [isPlayerVisible, setIsPlayerVisible] = useState(false);
 
   return (
     <div className="main">
@@ -21,8 +24,27 @@ function App() {
       <div className="links" style={{ "--link": User.primaryLinkColor, "--text": User.primaryTextColor }}>
         {/* TODO: could map through these so no manual config needed on this page */}
         <Link isClassic={true} title="Classic Link" link_url="https://github.com/mbrunkeECH/linktree" />
-        <Link title="Shows" dropDownVisible={false}>
-          <ShowsList Shows={Shows} />
+
+        <Link title="Shows"
+          dropDownVisible={isShowsVisible}
+          onClick={() => {
+            setIsShowsVisible(!isShowsVisible);
+            setIsPlayerVisible(false);
+          }}>
+          {isShowsVisible &&
+            <ShowsList Shows={Shows} />
+          }
+        </Link>
+
+        <Link title="Player"
+          dropDownVisible={isPlayerVisible}
+          onClick={() => {
+            setIsPlayerVisible(!isPlayerVisible);
+            setIsShowsVisible(false);
+          }}>
+          {isPlayerVisible &&
+            <MusicPlayer Platforms={Platforms.platforms} />
+          }
         </Link>
       </div>
 
